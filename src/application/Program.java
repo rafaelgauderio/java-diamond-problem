@@ -1,22 +1,29 @@
 package application;
 
-import model.devices.Printer;
-import model.devices.Scanner;
+import model.devices.ConcretePrinter;
+import model.devices.ConcreteScanner;
+import model.devices.MultifunctionalPrinterAndScanner;
 
 public class Program {
 
 	public static void main(String [] args) {
 		
-		Printer hp = new Printer("HP","Laser jet Pro m454dw");
+		ConcretePrinter hp = new ConcretePrinter("HP","Laser jet Pro m454dw");
 		hp.processingDocument("Rental Contract");
 		hp.print("Rental Contract");
 		
 		System.out.println("\n");
 		
-		Scanner canon = new Scanner("Canon", "Lide 300");
+		ConcreteScanner canon = new ConcreteScanner("Canon", "Lide 300");
 		canon.processingDocument("Pictures of Paris travel");
 		canon.scan("Pictures of Paris travel");
 		
+		System.out.println("\n");
+		
+		MultifunctionalPrinterAndScanner ricoh = new MultifunctionalPrinterAndScanner("Ricoh","LaserJet Aficio sp 3510sf");
+		ricoh.processingDocument("invoice");
+		ricoh.print("invoice");
+		ricoh.scan("Personal documents");
 		
 	}
 }
