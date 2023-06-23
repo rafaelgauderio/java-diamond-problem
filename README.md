@@ -1,1 +1,1 @@
-##how java handles the multiple inheritance
+how java handles the multiple inheritance
